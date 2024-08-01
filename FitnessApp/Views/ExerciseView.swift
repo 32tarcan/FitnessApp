@@ -11,18 +11,17 @@ struct Exercise: Identifiable {
     let id = UUID()
     let name: String
     let imageName: String
-    let duration: String
     let difficulty: String
 }
 
 struct ExerciseView: View {
     let exercises: [Exercise] = [
-        Exercise(name: "Crunches", imageName: "crunches", duration: "1hour 20 minutes", difficulty: "1/3"),
-        Exercise(name: "Decline Crunch", imageName: "decline_crunch", duration: "1hour 20 minutes", difficulty: "1/3"),
-        Exercise(name: "Dumbel Side Bend", imageName: "dumbel_side_bend", duration: "1hour 20 minutes", difficulty: "1/3"),
-        Exercise(name: "Hanging Leg Raise", imageName: "hanging_leg_raise", duration: "1hour 20 minutes", difficulty: "1/3"),
-        Exercise(name: "Crunches", imageName: "crunches", duration: "1hour 20 minutes", difficulty: "1/3"),
-        Exercise(name: "Crunches", imageName: "crunches", duration: "1hour 20 minutes", difficulty: "1/3")
+        Exercise(name: "Crunches", imageName: "Exercises", difficulty: "1/3"),
+        Exercise(name: "Decline Crunch", imageName: "Exercises-1", difficulty: "1/3"),
+        Exercise(name: "Dumbel Side Bend", imageName: "Exercises-3", difficulty: "1/3"),
+        Exercise(name: "Hanging Leg Raise", imageName: "Exercises-4", difficulty: "1/3"),
+        Exercise(name: "Crunches", imageName: "Exercises-5", difficulty: "1/3"),
+        Exercise(name: "Crunches", imageName: "Exercises-6", difficulty: "1/3")
     ]
     
     var body: some View {
@@ -76,27 +75,32 @@ struct ExerciseCard: View {
                 .resizable()
                 .scaledToFit()
                 .frame(height: 100)
-            Text(exercise.name)
-                .font(.headline)
-                .foregroundColor(.primary)
-            Text(exercise.duration)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            HStack {
-                Image(systemName: "bolt.fill")
-                    .foregroundColor(.yellow)
-                Text(exercise.difficulty)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                .padding(.top, 20)
+            VStack(alignment: .leading, spacing: 10) {
+                Text(exercise.name)
+                    .font(.headline)
+                    .foregroundColor(.white)
+               
+                HStack {
+                    Image(systemName: "bolt.fill")
+                        .foregroundColor(.yellow)
+                    Text(exercise.difficulty)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
             }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(6)
         }
         .padding()
-        .background(Color.white)
+        .background(Color.black.opacity(0.8))
         .cornerRadius(10)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
+        .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 10, x: 0, y: 5)
     }
 }
-
 #Preview {
     ExerciseView()
 }
