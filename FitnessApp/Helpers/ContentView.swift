@@ -23,7 +23,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            ProgramView()
+            ExerciseView()
                 .tabItem {
                     Image(systemName: "dumbbell")
                 }
