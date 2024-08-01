@@ -11,6 +11,12 @@
 		CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D32C5BC4E900E65782 /* ContentView.swift */; };
 		CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */; };
 		CE73C0D92C5BC4EA00E65782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D82C5BC4EA00E65782 /* Preview Assets.xcassets */; };
+		CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0DF2C5BC6EC00E65782 /* HomeView.swift */; };
+		CE73C0E22C5BC6F700E65782 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E12C5BC6F700E65782 /* TimerView.swift */; };
+		CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */; };
+		CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E52C5BC70600E65782 /* ReportsView.swift */; };
+		CE73C0E82C5BC70D00E65782 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E72C5BC70D00E65782 /* ProfileView.swift */; };
+		CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		CE73C0D32C5BC4E900E65782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE73C0D82C5BC4EA00E65782 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE73C0DF2C5BC6EC00E65782 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE73C0E12C5BC6F700E65782 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		CE73C0E52C5BC70600E65782 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		CE73C0E72C5BC70D00E65782 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,9 @@
 		CE73C0D02C5BC4E900E65782 /* FitnessApp */ = {
 			isa = PBXGroup;
 			children = (
-				CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */,
-				CE73C0D32C5BC4E900E65782 /* ContentView.swift */,
+				CE73C0EB2C5BC7F200E65782 /* Extensions */,
+				CE73C0EA2C5BC7EA00E65782 /* Helpers */,
+				CE73C0E92C5BC7DA00E65782 /* Views */,
 				CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */,
 				CE73C0D72C5BC4EA00E65782 /* Preview Content */,
 			);
@@ -65,6 +78,35 @@
 				CE73C0D82C5BC4EA00E65782 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE73C0E92C5BC7DA00E65782 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE73C0DF2C5BC6EC00E65782 /* HomeView.swift */,
+				CE73C0E12C5BC6F700E65782 /* TimerView.swift */,
+				CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */,
+				CE73C0E52C5BC70600E65782 /* ReportsView.swift */,
+				CE73C0E72C5BC70D00E65782 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE73C0EA2C5BC7EA00E65782 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */,
+				CE73C0D32C5BC4E900E65782 /* ContentView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE73C0EB2C5BC7F200E65782 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */,
 				CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */,
+				CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */,
+				CE73C0E22C5BC6F700E65782 /* TimerView.swift in Sources */,
+				CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */,
+				CE73C0E82C5BC70D00E65782 /* ProfileView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
+				CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
