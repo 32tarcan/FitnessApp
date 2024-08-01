@@ -6,19 +6,25 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct TimerView: View {
     @State private var timeRemaining = 60
     @State private var timer: Timer?
-    @State private var isPaused = false
-    
+    @State private var isPaused = true
+    @State private var selectedTime = Date()
+    @State private var audioPlayer: AVAudioPlayer?
+
     var body: some View {
         VStack {
             Spacer()
             ZStack {
                 Circle()
-                    .stroke(Color.purple.opacity(0.4), lineWidth: 10)
+                    .stroke(Color(hex: "33ACD1"), lineWidth: 6)
                     .frame(width: 200, height: 200)
+                Circle()
+                    .stroke(Color(hex: "82E1FF"), lineWidth: 6)
+                    .frame(width: 220, height: 220)
                 VStack {
                     Text("Rest")
                         .font(.largeTitle)
@@ -26,44 +32,53 @@ struct TimerView: View {
                     Text("\(timeString(time: timeRemaining))")
                         .font(.system(size: 60))
                         .foregroundColor(.white)
-                        .onAppear {
-                            startTimer()
-                        }
                 }
             }
+            DatePicker("Select Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                .labelsHidden()
+                .onChange(of: selectedTime) { newValue in
+                    let calendar = Calendar.current
+                    let components = calendar.dateComponents([.hour, .minute], from: newValue)
+                    if let hour = components.hour, let minute = components.minute {
+                        timeRemaining = (hour * 60 + minute) * 60
+                    }
+                }
+                .background(Color.black)
+                .cornerRadius(10)
+                .padding()
+                .offset(y: -30)
             Spacer()
             HStack {
                 Spacer()
-                Button(action: {
-                    // Done button action
-                    if isPaused {
-                        startTimer()
-                    } else {
-                        stopTimer()
+                VStack {
+                    Button(action: {
+                        if isPaused {
+                            startTimer()
+                        } else {
+                            stopTimer()
+                        }
+                        isPaused.toggle()
+                    }) {
+                        Text(isPaused ? "GO" : "PAUSE")
+                            .font(.title2)
+                            .frame(width: 178, height: 48)
+                            .foregroundColor(.white)
+                            .background(Color(hex: "27A4CB"))
+                            .cornerRadius(6)
                     }
-                    isPaused.toggle()
-                }) {
-                    Text(isPaused ? "DONE" : "PAUSE")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color(hex: "33ACD1"))
-                        .cornerRadius(10)
-                }
-                Spacer()
-                Button(action: {
-                    // Skip button action
-                    stopTimer()
-                    timeRemaining = 60 // Reset the timer
-                    isPaused = false
-                    startTimer()
-                }) {
-                    Text("SKIP")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color(hex: "33ACD1"))
-                        .cornerRadius(10)
+                    .padding()
+                    Button(action: {
+                        stopTimer()
+                        timeRemaining = 60 // Reset the timer
+                        isPaused = true
+                    }) {
+                        Text("SKIP")
+                            .font(.title2)
+                            .frame(width: 178, height: 48)
+                            .foregroundColor(.white)
+                            .background(Color(hex: "27A4CB"))
+                            .cornerRadius(6)
+                    }
                 }
                 Spacer()
             }
@@ -74,13 +89,16 @@ struct TimerView: View {
             Text("Cable Rope Upright")
                 .font(.title)
                 .foregroundColor(.white)
-            Image(systemName: "circle.fill")
+            Image(systemName: "clock")
                 .resizable()
                 .frame(width: 40, height: 40)
                 .foregroundColor(.white)
             Spacer()
         }
-        .background(Color(hex: "27A4CB").opacity(0.6).edgesIgnoringSafeArea(.all))
+        .background(Color(hex: "1E8FB2").opacity(0.6).edgesIgnoringSafeArea(.all))
+        .onAppear {
+            prepareAlarm()
+        }
     }
     
     func startTimer() {
@@ -90,6 +108,7 @@ struct TimerView: View {
                     timeRemaining -= 1
                 } else {
                     stopTimer()
+                    playAlarm()
                 }
             }
         }
@@ -98,6 +117,24 @@ struct TimerView: View {
     func stopTimer() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    func prepareAlarm() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            if let soundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.prepareToPlay()
+            }
+        } catch {
+            print("Error loading alarm sound: \(error.localizedDescription)")
+        }
+    }
+    
+    func playAlarm() {
+        audioPlayer?.play()
     }
     
     func timeString(time: Int) -> String {
