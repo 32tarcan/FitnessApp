@@ -17,6 +17,7 @@
 		CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E52C5BC70600E65782 /* ReportsView.swift */; };
 		CE73C0E82C5BC70D00E65782 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E72C5BC70D00E65782 /* ProfileView.swift */; };
 		CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */; };
+		CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CE73C0E52C5BC70600E65782 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
 		CE73C0E72C5BC70D00E65782 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */,
 				CE73C0E52C5BC70600E65782 /* ReportsView.swift */,
 				CE73C0E72C5BC70D00E65782 /* ProfileView.swift */,
+				CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */,
+				CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */,
 				CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */,
 				CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */,
 				CE73C0E22C5BC6F700E65782 /* TimerView.swift in Sources */,
