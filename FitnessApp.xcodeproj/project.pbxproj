@@ -19,6 +19,7 @@
 		CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */; };
 		CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */; };
 		CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */; };
+		CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */; };
 		CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */; };
 		CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebWiew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */,
+				CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */,
 			);
 			path = "Login+Register";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */,
 				CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */,
+				CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */,
 				CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */,
 				CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */,
 				CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */,
