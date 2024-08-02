@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE02B3BD2C5D876F00602DE0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02B3BC2C5D876F00602DE0 /* OnboardingView.swift */; };
 		CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */; };
 		CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D32C5BC4E900E65782 /* ContentView.swift */; };
 		CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE02B3BC2C5D876F00602DE0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CE73C0CE2C5BC4E900E65782 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppApp.swift; sourceTree = "<group>"; };
 		CE73C0D32C5BC4E900E65782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE02B3BB2C5D876200602DE0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CE02B3BC2C5D876F00602DE0 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		CE73C0C52C5BC4E900E65782 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		CE73C0E92C5BC7DA00E65782 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE02B3BB2C5D876200602DE0 /* Onboarding */,
 				CE82C4CE2C5D0BB900A737F6 /* Login+Register+Forgot */,
 				CE82C4CC2C5D059E00A737F6 /* TabViews */,
 				CE82C4CD2C5D05A800A737F6 /* SubViews */,
@@ -237,6 +248,7 @@
 				CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
 				CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */,
+				CE02B3BD2C5D876F00602DE0 /* OnboardingView.swift in Sources */,
 				CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */,
 				CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */,
 			);
