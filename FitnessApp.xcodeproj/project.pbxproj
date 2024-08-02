@@ -20,6 +20,7 @@
 		CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */; };
 		CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */; };
 		CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */; };
+		CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */; };
 		CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */; };
 		CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebWiew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +95,7 @@
 		CE73C0E92C5BC7DA00E65782 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CE82C4CE2C5D0BB900A737F6 /* Login+Register */,
+				CE82C4CE2C5D0BB900A737F6 /* Login+Register+Forgot */,
 				CE82C4CC2C5D059E00A737F6 /* TabViews */,
 				CE82C4CD2C5D05A800A737F6 /* SubViews */,
 			);
@@ -139,13 +141,14 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		CE82C4CE2C5D0BB900A737F6 /* Login+Register */ = {
+		CE82C4CE2C5D0BB900A737F6 /* Login+Register+Forgot */ = {
 			isa = PBXGroup;
 			children = (
 				CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */,
 				CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */,
+				CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */,
 			);
-			path = "Login+Register";
+			path = "Login+Register+Forgot";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +232,7 @@
 				CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */,
 				CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
+				CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */,
 				CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */,
 				CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */,
 			);
