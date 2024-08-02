@@ -34,7 +34,7 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                 }
                 .tag(3)
-            ProfileView()
+            SettingsView()
                 .tabItem {
                     Image(systemName: "person")
                 }

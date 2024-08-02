@@ -18,10 +18,10 @@ struct ExerciseView: View {
     let exercises: [Exercise] = [
         Exercise(name: "Crunches", imageName: "Exercises", difficulty: "1/3"),
         Exercise(name: "Decline Crunch", imageName: "Exercises-1", difficulty: "1/3"),
-        Exercise(name: "Dumbel Side Bend", imageName: "Exercises-3", difficulty: "1/3"),
-        Exercise(name: "Hanging Leg Raise", imageName: "Exercises-4", difficulty: "1/3"),
-        Exercise(name: "Crunches", imageName: "Exercises-5", difficulty: "1/3"),
-        Exercise(name: "Crunches", imageName: "Exercises-6", difficulty: "1/3")
+        Exercise(name: "Dumbel Side Bend", imageName: "Exercises-2", difficulty: "1/3"),
+        Exercise(name: "Hanging Leg Raise", imageName: "Exercises-3", difficulty: "1/3"),
+        Exercise(name: "Crunches", imageName: "Exercises-4", difficulty: "1/3"),
+        Exercise(name: "Crunches", imageName: "Exercises-5", difficulty: "1/3")
     ]
     
     var body: some View {
@@ -96,9 +96,9 @@ struct ExerciseCard: View {
             .cornerRadius(6)
         }
         .padding()
-        .background(Color.black.opacity(0.8))
+        .background(Color.black.opacity(0.5))
         .cornerRadius(10)
-        .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 10, x: 0, y: 5)
+        .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 0, x: 0, y: 0)
     }
 }
 #Preview {
