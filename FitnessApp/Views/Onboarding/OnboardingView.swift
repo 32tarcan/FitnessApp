@@ -17,15 +17,16 @@ struct OnboardingView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             VStack {
+                Spacer()
                 Text("Start Your Daily\n Workout Now!")
                     .multilineTextAlignment(.center)
                     .bold()
                     .font(.largeTitle)
-                    .offset(y: 100)
+                
                 Text("Thanks to this application, you will do your exercise in a planned manner and increase your efficiency to 100%.")
                     .multilineTextAlignment(.center)
                     .padding()
-                    .offset(y: 150)
+                    .padding(.bottom, 90)
                 
                 Button(action: {
                     showOnboarding = false
@@ -39,10 +40,13 @@ struct OnboardingView: View {
                             LinearGradient(gradient: Gradient(colors: [Color.black, Color(hex: "1E8FB2")]), startPoint: .leading, endPoint: .trailing)
                         )
                         .cornerRadius(10.0)
-                        .padding(.top, 50)
-                        .frame(width: 320)
+                        .padding(.horizontal)
                 }
             }
         }
     }
+}
+
+#Preview {
+    OnboardingView(showOnboarding: .constant(true))
 }
