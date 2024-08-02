@@ -14,7 +14,7 @@ struct LoginView: View {
     @State private var navigate = false
     @State private var registerNav = false
     @State private var forgotNav = false
-    
+    @State private var showOnboarding = false
     
     var body: some View {
         NavigationStack {
@@ -34,7 +34,6 @@ struct LoginView: View {
                     Text("Hello\nUser!")
                         .font(.largeTitle)
                         .foregroundColor(.white)
-                        
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 50)
                         .offset(x: -130)
@@ -146,3 +145,4 @@ struct LoginView: View {
 #Preview {
     LoginView()
 }
+

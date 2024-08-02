@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab = false
+    @State private var selectedTab = 0
+    @State private var showOnboarding = false
+
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView()
@@ -34,15 +36,22 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                 }
                 .tag(3)
+            
             SettingView()
                 .tabItem {
                     Image(systemName: "gear")
                 }
-                .tag(3)
+                .tag(4)
         }
         .padding(.vertical, -50)
         .accentColor(Color(hex: "1E8FB2"))
         .preferredColorScheme(.dark)
+        .onAppear {
+            showOnboarding = true
+        }
+        .sheet(isPresented: $showOnboarding) {
+            OnboardingView(showOnboarding: $showOnboarding)
+        }
     }
 }
 
