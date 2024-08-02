@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-struct TimerView: View {
+struct TimeView: View {
     @State private var timeRemaining = 60
     @State private var timer: Timer?
     @State private var isPaused = true
@@ -145,5 +145,5 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView()
+    TimeView()
 }

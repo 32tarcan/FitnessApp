@@ -12,12 +12,13 @@
 		CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */; };
 		CE73C0D92C5BC4EA00E65782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D82C5BC4EA00E65782 /* Preview Assets.xcassets */; };
 		CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0DF2C5BC6EC00E65782 /* HomeView.swift */; };
-		CE73C0E22C5BC6F700E65782 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E12C5BC6F700E65782 /* TimerView.swift */; };
+		CE73C0E22C5BC6F700E65782 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E12C5BC6F700E65782 /* TimeView.swift */; };
 		CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */; };
 		CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E52C5BC70600E65782 /* ReportsView.swift */; };
-		CE73C0E82C5BC70D00E65782 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E72C5BC70D00E65782 /* SettingsView.swift */; };
+		CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0E72C5BC70D00E65782 /* SettingView.swift */; };
 		CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */; };
 		CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */; };
+		CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */; };
 		CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */; };
 		CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */; };
 /* End PBXBuildFile section */
@@ -29,12 +30,13 @@
 		CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE73C0D82C5BC4EA00E65782 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE73C0DF2C5BC6EC00E65782 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CE73C0E12C5BC6F700E65782 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		CE73C0E12C5BC6F700E65782 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		CE73C0E52C5BC70600E65782 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
-		CE73C0E72C5BC70D00E65782 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE73C0E72C5BC70D00E65782 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		CE73C0EC2C5BC81500E65782 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebWiew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 		CE73C0E92C5BC7DA00E65782 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE82C4CE2C5D0BB900A737F6 /* Login+Register */,
 				CE82C4CC2C5D059E00A737F6 /* TabViews */,
 				CE82C4CD2C5D05A800A737F6 /* SubViews */,
 			);
@@ -117,10 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				CE73C0DF2C5BC6EC00E65782 /* HomeView.swift */,
-				CE73C0E12C5BC6F700E65782 /* TimerView.swift */,
+				CE73C0E12C5BC6F700E65782 /* TimeView.swift */,
 				CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */,
 				CE73C0E52C5BC70600E65782 /* ReportsView.swift */,
-				CE73C0E72C5BC70D00E65782 /* SettingsView.swift */,
+				CE73C0E72C5BC70D00E65782 /* SettingView.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -132,6 +135,14 @@
 				CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CE82C4CE2C5D0BB900A737F6 /* Login+Register */ = {
+			isa = PBXGroup;
+			children = (
+				CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */,
+			);
+			path = "Login+Register";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +220,10 @@
 				CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */,
 				CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */,
 				CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */,
-				CE73C0E22C5BC6F700E65782 /* TimerView.swift in Sources */,
+				CE73C0E22C5BC6F700E65782 /* TimeView.swift in Sources */,
+				CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */,
 				CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */,
-				CE73C0E82C5BC70D00E65782 /* SettingsView.swift in Sources */,
+				CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
 				CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */,
 				CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */,

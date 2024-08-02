@@ -17,7 +17,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            TimerView()
+            TimeView()
                 .tabItem {
                     Image(systemName: "timer")
                 }
@@ -34,7 +34,7 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                 }
                 .tag(3)
-            SettingsView()
+            SettingView()
                 .tabItem {
                     Image(systemName: "gear")
                 }
