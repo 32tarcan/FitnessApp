@@ -21,6 +21,7 @@
 		CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */; };
 		CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */; };
 		CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */; };
+		CE82C4DB2C5D26D000A737F6 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4DA2C5D26D000A737F6 /* VerificationView.swift */; };
 		CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */; };
 		CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		CE82C4DA2C5D26D000A737F6 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebWiew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 				CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */,
 				CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */,
 				CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */,
+				CE82C4DA2C5D26D000A737F6 /* VerificationView.swift */,
 			);
 			path = "Login+Register+Forgot";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE82C4DB2C5D26D000A737F6 /* VerificationView.swift in Sources */,
 				CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */,
 				CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */,
 				CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */,
