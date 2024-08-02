@@ -12,107 +12,124 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
     @State private var navigate = false
+    @State private var registerNav = false
     
     var body: some View {
-        ZStack {
-            Image("Login")
-                .resizable()
-                .ignoresSafeArea()
-            
-            VStack {
+        NavigationStack {
+            ZStack {
+                Image("Login")
+                    .resizable()
+                    .ignoresSafeArea()
+                Image("Rectangle")
+                    .resizable()
+                    .background(Color.black)
+                    .cornerRadius(20)
+                    .opacity(0.5)
+                    .frame(width: 370, height: 450)
+                    .offset(y: 60)
                 
-                Text("Hello\nUser!")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 50)
-                    .offset(x: -130)
-                    .bold()
-                
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Mail")
-                        .foregroundColor(Color.white)
+                VStack {
+                    Text("Hello\nUser!")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 50)
+                        .offset(x: -130)
+                        .bold()
                     
-                    TextField("Email", text: $email)
-                        .padding()
-                        .foregroundColor(.black)
-                        .background(Color.white)
-                        .cornerRadius(5.0)
-                        .shadow(radius: 10)
-                    
-                    Text("Password")
-                        .foregroundColor(Color.white)
-                    
-                    ZStack {
-                        if isPasswordVisible {
-                            TextField("Password", text: $password)
-                                .padding()
-                                .background(Color.white)
-                                .cornerRadius(5.0)
-                                .shadow(radius: 10)
-                        } else {
-                            SecureField("Password", text: $password)
-                                .padding()
-                                .background(Color.white)
-                                .cornerRadius(5.0)
-                                .shadow(radius: 10)
+                    VStack(alignment: .leading, spacing: 15) {
+                        Text("Mail")
+                            .foregroundColor(Color.white)
+                        
+                        TextField("Email", text: $email)
+                            .padding()
+                            .foregroundColor(.black)
+                            .background(Color.white)
+                            .cornerRadius(5.0)
+                            .shadow(radius: 10)
+                        
+                        Text("Password")
+                            .foregroundColor(Color.white)
+                        
+                        ZStack {
+                            if isPasswordVisible {
+                                TextField("Password", text: $password)
+                                    .padding()
+                                    .background(Color.white)
+                                    .cornerRadius(5.0)
+                                    .shadow(radius: 10)
+                            } else {
+                                SecureField("Password", text: $password)
+                                    .padding()
+                                    .background(Color.white)
+                                    .cornerRadius(5.0)
+                                    .shadow(radius: 10)
+                            }
+                            
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    isPasswordVisible.toggle()
+                                }) {
+                                    Image(systemName: self.isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                                        .foregroundColor(.gray)
+                                        .padding(.trailing, 15)
+                                }
+                            }
                         }
+                        .foregroundColor(.black)
                         
                         HStack {
                             Spacer()
                             Button(action: {
-                                isPasswordVisible.toggle()
+                                // Forgot password action
                             }) {
-                                Image(systemName: self.isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                                    .foregroundColor(.gray)
-                                    .padding(.trailing, 15)
+                                Text("Forgot password")
+                                    .foregroundColor(.white)
                             }
                         }
                     }
-                    .foregroundColor(.black)
+                    .padding(.horizontal, 27.5)
                     
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            // Forgot password action
-                        }) {
-                            Text("Forgot password")
-                                .foregroundColor(.white)
-                        }
-                    }
-                }
-                .padding(.horizontal, 27.5)
-                
-                Button(action: {
-                    self.navigate = true
-                }) {
-                    Text("SIGN IN")
-                        .foregroundColor(.white)
-                        .bold()
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(
-                            LinearGradient(gradient: Gradient(colors: [Color.black, Color.blue]), startPoint: .leading, endPoint: .trailing)
-                        )
-                        .cornerRadius(10.0)
-                        .padding(.top, 50)
-                        .frame(width: 320)
-                }
-                .fullScreenCover(isPresented: $navigate) {
-                    ContentView()
-                }
-                HStack {
-                    Text("Don't have account?")
-                        .foregroundColor(.white).opacity(0.8)
                     Button(action: {
-                       //action
+                        self.navigate = true
                     }) {
-                        Text("Sign Up")
+                        Text("SIGN IN")
                             .foregroundColor(.white)
                             .bold()
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(
+                                LinearGradient(gradient: Gradient(colors: [Color.black, Color(hex: "1E8FB2")]), startPoint: .leading, endPoint: .trailing)
+                            )
+                            .cornerRadius(10.0)
+                            .padding(.top, 50)
+                            .frame(width: 320)
+                            .offset(y: -20)
                     }
+                    .fullScreenCover(isPresented: $navigate) {
+                        ContentView()
+                    }
+                    HStack {
+                        Text("Don't have account?")
+                            .foregroundColor(.white).opacity(0.8)
+                        NavigationLink(
+                            destination: RegisterView(),
+                            isActive: $registerNav
+                        ) {
+                            EmptyView()
+                        }
+                        Button(action: {
+                            self.registerNav = true
+                        }) {
+                            Text("Sign Up")
+                                .foregroundColor(.white)
+                                .bold()
+                        }
+                    }
+                    .padding(.bottom, 10)
                 }
-                .padding(.bottom, 10)
             }
         }
     }
