@@ -24,8 +24,31 @@ struct SettingsView: View {
             .sheet(isPresented: $present, content: {
                 ReportsView()
             })
-            .foregroundStyle(Color(hex: "1E8FB2"))
+            Button(action: {
+                self.present = true
+            }) {
+                HStack {
+                    Image(systemName: "star")
+                    Text("Rate Us!")
+                }
+            }
+            .sheet(isPresented: $present, content: {
+                ReportsView()
+            })
+            Button(action: {
+                self.present = true
+            }) {
+                HStack {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+            }
+            .sheet(isPresented: $present, content: {
+                ReportsView()
+            })
+            
         }
+        .foregroundStyle(Color(hex: "1E8FB2"))
     }
 }
 
