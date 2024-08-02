@@ -36,7 +36,7 @@ struct ContentView: View {
                 .tag(3)
             SettingsView()
                 .tabItem {
-                    Image(systemName: "person")
+                    Image(systemName: "gear")
                 }
                 .tag(3)
         }
