@@ -7,16 +7,17 @@
 
 import SwiftUI
 
+
 struct WorkoutDetailView: View {
     let workout: (String, String, String, String, String)
     
     var body: some View {
         VStack {
-            Image(workout.4)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 200)
-            
+            WebView(urlString: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be")
+                .frame(width: 360,height: 200)
+                .cornerRadius(8)
+                .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 10, x: 0, y: 5)
+                .padding()
             Text(workout.0)
                 .font(.largeTitle)
                 .fontWeight(.bold)
