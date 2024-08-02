@@ -49,7 +49,7 @@ struct RegisterView: View {
                         .cornerRadius(5.0)
                         .shadow(radius: 10)
                     
-                    Text("Mail")
+                    Text("Email")
                         .foregroundColor(Color.white)
                     
                     TextField("Email", text: $email)
@@ -113,7 +113,8 @@ struct RegisterView: View {
                 }
                 .padding(.bottom, 10)
             }
-        }.navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {

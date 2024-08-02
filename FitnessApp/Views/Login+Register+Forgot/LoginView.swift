@@ -13,6 +13,8 @@ struct LoginView: View {
     @State private var isPasswordVisible: Bool = false
     @State private var navigate = false
     @State private var registerNav = false
+    @State private var forgotNav = false
+    
     
     var body: some View {
         NavigationStack {
@@ -39,7 +41,7 @@ struct LoginView: View {
                         .bold()
                     
                     VStack(alignment: .leading, spacing: 15) {
-                        Text("Mail")
+                        Text("Email")
                             .foregroundColor(Color.white)
                         
                         TextField("Email", text: $email)
@@ -83,10 +85,16 @@ struct LoginView: View {
                         HStack {
                             Spacer()
                             Button(action: {
-                                // Forgot password action
+                                self.forgotNav = true
                             }) {
                                 Text("Forgot password")
                                     .foregroundColor(.white)
+                            }
+                            NavigationLink(
+                                destination: ForgotPassword(),
+                                isActive: $forgotNav
+                            ) {
+                                EmptyView()
                             }
                         }
                     }

@@ -32,6 +32,7 @@ struct ForgotPassword: View {
                 
                 VStack {
                     Text("Enter Email Adress")
+                        .foregroundStyle(.white)
                         .bold()
                         .font(.system(size: 24))
                         .padding()
