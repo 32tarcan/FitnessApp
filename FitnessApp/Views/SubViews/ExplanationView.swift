@@ -11,6 +11,8 @@ struct ExplanationView: View {
     let workout: WorkoutData
     
     var body: some View {
+        
+        //Change UI
         ZStack(alignment: .bottomLeading) {
             Image(workout.imageName)
                 .resizable()
