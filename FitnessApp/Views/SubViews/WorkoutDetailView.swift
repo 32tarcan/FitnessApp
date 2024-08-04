@@ -7,40 +7,69 @@
 
 import SwiftUI
 
-
 struct WorkoutDetailView: View {
-    let workout: (String, String, String, String, String)
+    @ObservedObject var viewModel: WorkoutViewModel
+    let workout: WorkoutData
     
     var body: some View {
         VStack {
-            WebView(urlString: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be")
-                .frame(width: 360,height: 200)
+            WebView(urlString: workout.videoURL)
+                .frame(width: 360, height: 200)
                 .cornerRadius(8)
                 .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 10, x: 0, y: 5)
                 .padding()
-            Text(workout.0)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.top, -20)
+
+            HStack {
+                Button(action: {
+                    viewModel.selectedButton = "Explanation"
+                })  {
+                    VStack {
+                        Text("Explanation")
+                            .foregroundColor(viewModel.selectedButton == "Explanation" ? Color(hex: "1E8FB2") : .white)
+                        Rectangle()
+                            .frame(height: 2)
+                            .foregroundColor(viewModel.selectedButton == "Explanation" ? Color(hex: "1E8FB2") : .clear)
+                    }
+                }
+                Button(action: {
+                    viewModel.selectedButton = "Focus"
+                })  {
+                    VStack {
+                        Text("Focus")
+                            .offset(x: -10)
+                            .foregroundColor(viewModel.selectedButton == "Focus" ? Color(hex: "1E8FB2") : .white)
+                        Rectangle()
+                            .frame(height: 2)
+                            .offset(x: -10)
+                            .foregroundColor(viewModel.selectedButton == "Focus" ? Color(hex: "1E8FB2") : .clear)
+                    }
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top, 10)
             
-            Text("Duration: \(workout.1)")
-                .font(.headline)
-                .padding(.top, 5)
-            
-            Text("Level: \(workout.2)")
-                .font(.headline)
-                .padding(.top, 5)
-            
-            Text("Progress: \(workout.3)")
-                .font(.headline)
-                .padding(.top, 5)
-            
-            Spacer()
+            ScrollView {
+                if viewModel.selectedButton == "Explanation" {
+                    ExplanationView(workout: workout)
+                        .padding(.horizontal)
+                        .padding(.top, 10)
+                } else if viewModel.selectedButton == "Focus" {
+                    FocusView()
+                }
+            }
         }
-        .navigationBarTitle(Text(workout.0), displayMode: .inline)
+        .navigationBarTitle(Text(workout.title), displayMode: .inline)
         .padding()
+        .onAppear {
+            viewModel.selectedWorkout = workout
+        }
     }
 }
+
 #Preview {
-    WorkoutDetailView(workout: ("Morning Yoga", "30 mins", "Beginner", "50%", "Training-1"))
+    let viewModel = WorkoutViewModel()
+    let workout = WorkoutData(id: "1", title: "ABS Workout", duration: "1hour 20 minutes", level: "Beginner", progress: "1/3", imageName: "Training-3", videoURL: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be")
+    viewModel.workouts = [workout]
+    return WorkoutDetailView(viewModel: viewModel, workout: workout)
 }
+

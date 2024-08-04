@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CE02B3BD2C5D876F00602DE0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02B3BC2C5D876F00602DE0 /* OnboardingView.swift */; };
+		CE11462A2C601A3A005482E2 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146292C601A3A005482E2 /* FocusView.swift */; };
+		CE11462C2C601B16005482E2 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11462B2C601B16005482E2 /* WorkoutCardView.swift */; };
+		CE1146312C601BE6005482E2 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146302C601BE6005482E2 /* WorkoutData.swift */; };
+		CE1146342C601DA0005482E2 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146332C601DA0005482E2 /* WorkoutViewModel.swift */; };
+		CE1146362C601FB9005482E2 /* WorkoutDetaiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146352C601FB9005482E2 /* WorkoutDetaiViewModel.swift */; };
+		CE1146382C602114005482E2 /* ExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146372C602114005482E2 /* ExplanationView.swift */; };
 		CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */; };
 		CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D32C5BC4E900E65782 /* ContentView.swift */; };
 		CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */; };
@@ -29,6 +35,12 @@
 
 /* Begin PBXFileReference section */
 		CE02B3BC2C5D876F00602DE0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		CE1146292C601A3A005482E2 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		CE11462B2C601B16005482E2 /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
+		CE1146302C601BE6005482E2 /* WorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutData.swift; sourceTree = "<group>"; };
+		CE1146332C601DA0005482E2 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
+		CE1146352C601FB9005482E2 /* WorkoutDetaiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetaiViewModel.swift; sourceTree = "<group>"; };
+		CE1146372C602114005482E2 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		CE73C0CE2C5BC4E900E65782 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppApp.swift; sourceTree = "<group>"; };
 		CE73C0D32C5BC4E900E65782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +80,22 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		CE11462D2C601BA8005482E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE1146322C601D82005482E2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE1146332C601DA0005482E2 /* WorkoutViewModel.swift */,
+				CE1146352C601FB9005482E2 /* WorkoutDetaiViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		CE73C0C52C5BC4E900E65782 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +117,9 @@
 			children = (
 				CE73C0EB2C5BC7F200E65782 /* Extensions */,
 				CE73C0EA2C5BC7EA00E65782 /* Helpers */,
+				CE11462D2C601BA8005482E2 /* Models */,
+				CE1146302C601BE6005482E2 /* WorkoutData.swift */,
+				CE1146322C601D82005482E2 /* ViewModels */,
 				CE73C0E92C5BC7DA00E65782 /* Views */,
 				CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */,
 				CE73C0D72C5BC4EA00E65782 /* Preview Content */,
@@ -150,6 +181,9 @@
 			children = (
 				CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */,
 				CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */,
+				CE1146292C601A3A005482E2 /* FocusView.swift */,
+				CE11462B2C601B16005482E2 /* WorkoutCardView.swift */,
+				CE1146372C602114005482E2 /* ExplanationView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -237,6 +271,7 @@
 			files = (
 				CE82C4DB2C5D26D000A737F6 /* VerificationView.swift in Sources */,
 				CE73C0E02C5BC6EC00E65782 /* HomeView.swift in Sources */,
+				CE1146342C601DA0005482E2 /* WorkoutViewModel.swift in Sources */,
 				CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */,
 				CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */,
 				CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */,
@@ -245,11 +280,16 @@
 				CE73C0E22C5BC6F700E65782 /* TimeView.swift in Sources */,
 				CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */,
 				CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */,
+				CE1146312C601BE6005482E2 /* WorkoutData.swift in Sources */,
 				CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
 				CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */,
 				CE02B3BD2C5D876F00602DE0 /* OnboardingView.swift in Sources */,
+				CE1146362C601FB9005482E2 /* WorkoutDetaiViewModel.swift in Sources */,
+				CE11462C2C601B16005482E2 /* WorkoutCardView.swift in Sources */,
 				CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */,
+				CE11462A2C601A3A005482E2 /* FocusView.swift in Sources */,
+				CE1146382C602114005482E2 /* ExplanationView.swift in Sources */,
 				CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
