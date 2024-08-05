@@ -9,13 +9,22 @@ import Foundation
 import FirebaseAuth
 
 class AuthViewModel: ObservableObject {
-    @Published var isAuthenticated: Bool = UserDefaults.standard.bool(forKey: "isAuthenticated") {
-        didSet {
-            UserDefaults.standard.set(isAuthenticated, forKey: "isAuthenticated")
-        }
-    }
+    @Published var isAuthenticated: Bool = false
     @Published var errorMessage: String?
     @Published var displayName: String?
+
+    init() {
+        checkUser()
+    }
+
+    func checkUser() {
+        if let user = Auth.auth().currentUser {
+            self.isAuthenticated = true
+            self.displayName = user.displayName
+        } else {
+            self.isAuthenticated = false
+        }
+    }
 
     func signIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in

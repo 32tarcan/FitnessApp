@@ -17,7 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct YourApp: App {
+struct FitnessAppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var authViewModel = AuthViewModel()
 
@@ -32,7 +32,8 @@ struct YourApp: App {
                         .environmentObject(authViewModel)
                 }
             }
-            .environmentObject(authViewModel) 
+            .environmentObject(authViewModel)
         }
     }
 }
+

@@ -11,6 +11,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
+    @State private var navigate = false
     @State private var registerNav = false
     @State private var forgotNav = false
     @EnvironmentObject var authViewModel: AuthViewModel
@@ -48,7 +49,6 @@ struct LoginView: View {
                             .background(Color.white)
                             .cornerRadius(5.0)
                             .shadow(radius: 10)
-                            .autocapitalization(.none)
                         
                         Text("Password")
                             .foregroundColor(Color.white)
@@ -60,14 +60,12 @@ struct LoginView: View {
                                     .background(Color.white)
                                     .cornerRadius(5.0)
                                     .shadow(radius: 10)
-                                    .autocapitalization(.none)
                             } else {
                                 SecureField("Password", text: $password)
                                     .padding()
                                     .background(Color.white)
                                     .cornerRadius(5.0)
                                     .shadow(radius: 10)
-                                    .autocapitalization(.none)
                             }
                             
                             HStack {
@@ -119,8 +117,12 @@ struct LoginView: View {
                     }
                     .onChange(of: authViewModel.isAuthenticated) { isAuthenticated in
                         if isAuthenticated {
-                            // Giriş başarılı, ana ekrana yönlendir
+                            navigate = true
                         }
+                    }
+                    .fullScreenCover(isPresented: $navigate) {
+                        ContentView()
+                            .environmentObject(authViewModel)
                     }
                     HStack {
                         Text("Don't have account?")
