@@ -49,6 +49,7 @@ struct LoginView: View {
                             .background(Color.white)
                             .cornerRadius(5.0)
                             .shadow(radius: 10)
+                            .autocapitalization(.none)
                         
                         Text("Password")
                             .foregroundColor(Color.white)
