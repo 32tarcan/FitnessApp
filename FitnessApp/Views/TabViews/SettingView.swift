@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SettingView: View {
-    
     @State private var present = false
     @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -67,7 +67,7 @@ struct SettingView: View {
                     }) {
                         HStack {
                             Image(systemName: "newspaper")
-                            Text("Term Of Use!")
+                            Text("Terms of Use")
                         }
                     }
                     .sheet(isPresented: $present, content: {
@@ -96,20 +96,18 @@ struct SettingView: View {
                         ReportsView()
                     })
                 }
-                
             }
             .foregroundStyle(Color(hex: "1E8FB2"))
             
             Button(action: {
-                //action
+                authViewModel.signOut()
             }) {
                 Text("Logout")
                     .foregroundColor(.white)
                     .frame(width: 250, height: 50)
-                    .background(.red)
+                    .background(Color.red)
                     .cornerRadius(16)
                     .padding()
-                    
             }
             .padding(.bottom, 250)
         }
@@ -118,4 +116,5 @@ struct SettingView: View {
 
 #Preview {
     SettingView()
+        .environmentObject(AuthViewModel())
 }

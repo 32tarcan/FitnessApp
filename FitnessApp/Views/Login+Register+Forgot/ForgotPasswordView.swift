@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ForgotPassword: View {
+struct ForgotPasswordView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
@@ -93,5 +93,5 @@ struct ForgotPassword: View {
 }
 
 #Preview {
-    ForgotPassword()
+    ForgotPasswordView()
 }

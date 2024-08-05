@@ -8,53 +8,63 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     @State private var selectedTab = 0
     @State private var showOnboarding = false
 
     var body: some View {
-        TabView(selection: $selectedTab) {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
+        VStack {
+            if authViewModel.isAuthenticated {
+                TabView(selection: $selectedTab) {
+                    HomeView()
+                        .tabItem {
+                            Label("Home", systemImage: "house")
+                        }
+                        .tag(0)
+                    
+                    TimeView()
+                        .tabItem {
+                            Label("Time", systemImage: "timer")
+                        }
+                        .tag(1)
+                    
+                    ExerciseView()
+                        .tabItem {
+                            Label("Exercise", systemImage: "dumbbell")
+                        }
+                        .tag(2)
+                    
+                    ReportsView()
+                        .tabItem {
+                            Label("Reports", systemImage: "calendar")
+                        }
+                        .tag(3)
+                    
+                    SettingView()
+                        .tabItem {
+                            Label("Settings", systemImage: "gear")
+                        }
+                        .tag(4)
                 }
-                .tag(0)
-            
-            TimeView()
-                .tabItem {
-                    Image(systemName: "timer")
+                .accentColor(Color(hex: "1E8FB2"))
+                .preferredColorScheme(.dark)
+                .onAppear {
+                    showOnboarding = true
+                    selectedTab = 0 // HomeView'ın ilk açılan sekme olmasını sağlar
                 }
-                .tag(1)
-            
-            ExerciseView()
-                .tabItem {
-                    Image(systemName: "dumbbell")
+                .sheet(isPresented: $showOnboarding) {
+                    OnboardingView(showOnboarding: $showOnboarding)
                 }
-                .tag(2)
-            
-            ReportsView()
-                .tabItem {
-                    Image(systemName: "calendar")
-                }
-                .tag(3)
-            
-            SettingView()
-                .tabItem {
-                    Image(systemName: "gear")
-                }
-                .tag(4)
-        }
-        .padding(.vertical, -50)
-        .accentColor(Color(hex: "1E8FB2"))
-        .preferredColorScheme(.dark)
-        .onAppear {
-            showOnboarding = true
-        }
-        .sheet(isPresented: $showOnboarding) {
-            OnboardingView(showOnboarding: $showOnboarding)
+            } else {
+                Text("You are not authenticated")
+            }
         }
     }
 }
 
+
+
 #Preview {
     ContentView()
+        .environmentObject(AuthViewModel())
 }

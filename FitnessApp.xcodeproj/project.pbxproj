@@ -23,6 +23,8 @@
 		CE11464F2C6037F7005482E2 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CE11464E2C6037F7005482E2 /* FirebaseFunctionsCombine-Community */; };
 		CE1146512C6037F7005482E2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CE1146502C6037F7005482E2 /* FirebaseStorage */; };
 		CE1146532C6037F7005482E2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CE1146522C6037F7005482E2 /* FirebaseStorageCombine-Community */; };
+		CE1146562C603A46005482E2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146552C603A46005482E2 /* AuthViewModel.swift */; };
+		CE1146572C603B78005482E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1146402C603764005482E2 /* GoogleService-Info.plist */; };
 		CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */; };
 		CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D32C5BC4E900E65782 /* ContentView.swift */; };
 		CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */; };
@@ -36,7 +38,7 @@
 		CE73C0EF2C5BD89900E65782 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */; };
 		CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */; };
 		CE82C4D22C5D0DFE00A737F6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */; };
-		CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */; };
+		CE82C4D62C5D20ED00A737F6 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4D52C5D20ED00A737F6 /* ForgotPasswordView.swift */; };
 		CE82C4DB2C5D26D000A737F6 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82C4DA2C5D26D000A737F6 /* VerificationView.swift */; };
 		CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */; };
 		CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */; };
@@ -51,6 +53,7 @@
 		CE1146352C601FB9005482E2 /* WorkoutDetaiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetaiViewModel.swift; sourceTree = "<group>"; };
 		CE1146372C602114005482E2 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		CE1146402C603764005482E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE1146552C603A46005482E2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CE73C0CE2C5BC4E900E65782 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppApp.swift; sourceTree = "<group>"; };
 		CE73C0D32C5BC4E900E65782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +68,7 @@
 		CE73C0EE2C5BD89900E65782 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		CE82C4D52C5D20ED00A737F6 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		CE82C4DA2C5D26D000A737F6 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebWiew.swift; sourceTree = "<group>"; };
@@ -115,6 +118,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CE1146542C603A24005482E2 /* AuthViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE1146552C603A46005482E2 /* AuthViewModel.swift */,
+			);
+			path = AuthViewModels;
+			sourceTree = "<group>";
+		};
 		CE73C0C52C5BC4E900E65782 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +151,7 @@
 				CE11462D2C601BA8005482E2 /* Models */,
 				CE1146302C601BE6005482E2 /* WorkoutData.swift */,
 				CE1146322C601D82005482E2 /* ViewModels */,
+				CE1146542C603A24005482E2 /* AuthViewModels */,
 				CE73C0E92C5BC7DA00E65782 /* Views */,
 				CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */,
 				CE73C0D72C5BC4EA00E65782 /* Preview Content */,
@@ -213,7 +225,7 @@
 			children = (
 				CE82C4CF2C5D0BD600A737F6 /* LoginView.swift */,
 				CE82C4D12C5D0DFE00A737F6 /* RegisterView.swift */,
-				CE82C4D52C5D20ED00A737F6 /* ForgotPassword.swift */,
+				CE82C4D52C5D20ED00A737F6 /* ForgotPasswordView.swift */,
 				CE82C4DA2C5D26D000A737F6 /* VerificationView.swift */,
 			);
 			path = "Login+Register+Forgot";
@@ -293,6 +305,7 @@
 			files = (
 				CE73C0D92C5BC4EA00E65782 /* Preview Assets.xcassets in Resources */,
 				CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */,
+				CE1146572C603B78005482E2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +330,10 @@
 				CE1146312C601BE6005482E2 /* WorkoutData.swift in Sources */,
 				CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
-				CE82C4D62C5D20ED00A737F6 /* ForgotPassword.swift in Sources */,
+				CE82C4D62C5D20ED00A737F6 /* ForgotPasswordView.swift in Sources */,
 				CE02B3BD2C5D876F00602DE0 /* OnboardingView.swift in Sources */,
 				CE1146362C601FB9005482E2 /* WorkoutDetaiViewModel.swift in Sources */,
+				CE1146562C603A46005482E2 /* AuthViewModel.swift in Sources */,
 				CE11462C2C601B16005482E2 /* WorkoutCardView.swift in Sources */,
 				CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */,
 				CE11462A2C601A3A005482E2 /* FocusView.swift in Sources */,

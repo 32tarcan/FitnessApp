@@ -11,11 +11,10 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
-    @State private var navigate = false
     @State private var registerNav = false
     @State private var forgotNav = false
-    @State private var showOnboarding = false
-    
+    @EnvironmentObject var authViewModel: AuthViewModel
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -49,6 +48,7 @@ struct LoginView: View {
                             .background(Color.white)
                             .cornerRadius(5.0)
                             .shadow(radius: 10)
+                            .autocapitalization(.none)
                         
                         Text("Password")
                             .foregroundColor(Color.white)
@@ -60,12 +60,14 @@ struct LoginView: View {
                                     .background(Color.white)
                                     .cornerRadius(5.0)
                                     .shadow(radius: 10)
+                                    .autocapitalization(.none)
                             } else {
                                 SecureField("Password", text: $password)
                                     .padding()
                                     .background(Color.white)
                                     .cornerRadius(5.0)
                                     .shadow(radius: 10)
+                                    .autocapitalization(.none)
                             }
                             
                             HStack {
@@ -90,7 +92,7 @@ struct LoginView: View {
                                     .foregroundColor(.white)
                             }
                             NavigationLink(
-                                destination: ForgotPassword(),
+                                destination: ForgotPasswordView(),
                                 isActive: $forgotNav
                             ) {
                                 EmptyView()
@@ -100,7 +102,7 @@ struct LoginView: View {
                     .padding(.horizontal, 27.5)
                     
                     Button(action: {
-                        self.navigate = true
+                        authViewModel.signIn(email: email, password: password)
                     }) {
                         Text("SIGN IN")
                             .foregroundColor(.white)
@@ -115,8 +117,10 @@ struct LoginView: View {
                             .frame(width: 320)
                             .offset(y: -20)
                     }
-                    .fullScreenCover(isPresented: $navigate) {
-                        ContentView()
+                    .onChange(of: authViewModel.isAuthenticated) { isAuthenticated in
+                        if isAuthenticated {
+                            // Giriş başarılı, ana ekrana yönlendir
+                        }
                     }
                     HStack {
                         Text("Don't have account?")
@@ -144,5 +148,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environmentObject(AuthViewModel())
 }
-

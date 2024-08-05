@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var showOnboarding: Bool
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         ZStack {
@@ -17,6 +18,11 @@ struct OnboardingView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             VStack {
+                Text("Hello, \(authViewModel.displayName ?? "User")")
+                    .bold()
+                    .font(.largeTitle)
+                    .padding(.top, 50)
+                    .padding(.trailing, 200)
                 Spacer()
                 Text("Start Your Daily\n Workout Now!")
                     .multilineTextAlignment(.center)
@@ -49,4 +55,5 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView(showOnboarding: .constant(true))
+        .environmentObject(AuthViewModel())
 }
