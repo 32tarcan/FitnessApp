@@ -8,7 +8,7 @@
 import Foundation
 
 struct WorkoutData: Identifiable {
-    var id: UUID
+    var id: String
     var title: String
     var duration: String
     var level: String
