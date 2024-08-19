@@ -15,6 +15,7 @@ struct LoginView: View {
     @State private var registerNav = false
     @State private var forgotNav = false
     @EnvironmentObject var authViewModel: AuthViewModel
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
 
     var body: some View {
         NavigationStack {
@@ -118,6 +119,7 @@ struct LoginView: View {
                     }
                     .onChange(of: authViewModel.isAuthenticated) { isAuthenticated in
                         if isAuthenticated {
+                            hasSeenOnboarding = false // Kullanıcı giriş yaptığında onboarding'i sıfırla
                             navigate = true
                         }
                     }

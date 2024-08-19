@@ -4,12 +4,12 @@
 //
 //  Created by Sakans on 1.08.2024.
 //
-
 import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     @State private var selectedTab = 0
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     @State private var showOnboarding = false
 
     var body: some View {
@@ -49,20 +49,29 @@ struct ContentView: View {
                 .accentColor(Color(hex: "1E8FB2"))
                 .preferredColorScheme(.dark)
                 .onAppear {
-                    showOnboarding = true
-                    selectedTab = 0 // HomeView'ın ilk açılan sekme olmasını sağlar
+                    if !hasSeenOnboarding {
+                        showOnboarding = true
+                        hasSeenOnboarding = true // Onboarding gösterildikten sonra işaretlenir
+                    }
+                    selectedTab = 0
                 }
                 .sheet(isPresented: $showOnboarding) {
                     OnboardingView(showOnboarding: $showOnboarding)
+                        .environmentObject(authViewModel)
                 }
             } else {
                 Text("You are not authenticated")
+                    .onAppear {
+                        showOnboarding = true
+                    }
+                    .sheet(isPresented: $showOnboarding) {
+                        OnboardingView(showOnboarding: $showOnboarding)
+                            .environmentObject(authViewModel)
+                    }
             }
         }
     }
 }
-
-
 
 #Preview {
     ContentView()
