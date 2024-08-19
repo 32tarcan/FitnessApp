@@ -50,7 +50,7 @@ struct WorkoutDetailView: View {
             
             ScrollView {
                 if viewModel.selectedButton == "Explanation" {
-                    ExplanationView(workout: workout)
+                    ExplanationView()
                         .padding(.horizontal)
                         .padding(.top, 10)
                 } else if viewModel.selectedButton == "Focus" {
