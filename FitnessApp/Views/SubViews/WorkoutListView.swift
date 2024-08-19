@@ -11,14 +11,21 @@ struct WorkoutListView: View {
     @StateObject var vm = WorkoutViewModel()
     
     var body: some View {
-        List(vm.workouts) { workout in
-            WorkoutCardView(workout: workout)
+        ScrollView {
+            LazyVStack(spacing: 12) {
+                ForEach(vm.workouts) { workout in
+                    WorkoutCardView(workout: workout)
+                        .padding(.horizontal)
+                }
+            }
+            .padding(.vertical)
         }
         .onAppear {
             vm.fetchWorkouts()
         }
     }
 }
+
 #Preview {
     WorkoutListView()
 }
