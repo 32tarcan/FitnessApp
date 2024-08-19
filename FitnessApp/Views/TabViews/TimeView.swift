@@ -97,7 +97,7 @@ struct TimeView: View {
         }
         .background(Color(hex: "1E8FB2").opacity(0.6).edgesIgnoringSafeArea(.all))
         .onAppear {
-            prepareAlarm()
+         //   prepareAlarm()
         }
     }
     
@@ -119,19 +119,19 @@ struct TimeView: View {
         timer = nil
     }
     
-    func prepareAlarm() {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            if let soundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
-                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-                audioPlayer?.prepareToPlay()
-            }
-        } catch {
-            print("Error loading alarm sound: \(error.localizedDescription)")
-        }
-    }
+//    func prepareAlarm() {
+//        do {
+//            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+//            try AVAudioSession.sharedInstance().setActive(true)
+//            
+//            if let soundURL = Bundle.main.url(forResource: "alarm", withExtension: "mp3") {
+//                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+//                audioPlayer?.prepareToPlay()
+//            }
+//        } catch {
+//            print("Error loading alarm sound: \(error.localizedDescription)")
+//        }
+//    }
     
     func playAlarm() {
         audioPlayer?.play()
