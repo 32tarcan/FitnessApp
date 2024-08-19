@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct WorkoutListView: View {
+    @StateObject var vm = WorkoutViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(vm.workouts) { workout in
+            WorkoutCardView(workout: workout)
+        }
+        .onAppear {
+            vm.fetchWorkouts()
+        }
     }
 }
-
 #Preview {
     WorkoutListView()
 }

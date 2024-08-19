@@ -65,23 +65,9 @@ struct HomeView: View {
                 .font(.custom("", size: 16))
                 .offset(x: -10)
                 
-                ScrollView {
-                    VStack(alignment: .leading) {
-                        Text("BEGINNER")
-                            .font(.headline)
-                            .padding(.leading)
-                        
-                        ForEach(viewModel.workouts) { workout in
-                            NavigationLink(destination: WorkoutDetailView(viewModel: viewModel, workout: workout)) {
-                                WorkoutCardView(workout: workout)
-                                    .padding(.horizontal)
-                                    .padding(.top, 10)
-                            }
-                        }
-                    }
-                }
+                WorkoutListView()
+                
             }
-            .navigationBarTitle("Workouts", displayMode: .inline)
         }
     }
 }
