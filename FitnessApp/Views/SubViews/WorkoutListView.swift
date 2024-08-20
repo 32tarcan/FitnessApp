@@ -11,18 +11,22 @@ struct WorkoutListView: View {
     @StateObject var vm = WorkoutViewModel()
     
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 12) {
-                ForEach(vm.workouts) { workout in
-                    WorkoutCardView(workout: workout)
-                        .padding(.horizontal)
+        NavigationView {
+            ScrollView {
+                LazyVStack(spacing: 12) {
+                    ForEach(vm.workouts) { workout in
+                        NavigationLink(destination: WorkoutDetailView(viewModel: vm, workout: workout)) {
+                            WorkoutCardView(workout: workout)
+                                .padding(.horizontal)
+                        }
+                    }
                 }
+                .padding(.vertical)
             }
-            .padding(.vertical)
-        }
-        .onAppear {
-            if vm.workouts.isEmpty {
-                vm.fetchWorkouts()
+            .onAppear {
+                if vm.workouts.isEmpty {
+                    vm.fetchWorkouts()
+                }
             }
         }
     }
@@ -31,3 +35,4 @@ struct WorkoutListView: View {
 #Preview {
     WorkoutListView()
 }
+

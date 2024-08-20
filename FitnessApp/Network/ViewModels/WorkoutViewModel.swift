@@ -34,7 +34,9 @@ class WorkoutViewModel: ObservableObject {
                            let level = data["level"] as? String,
                            let progress = data["progress"] as? String,
                            let imageName = data["imageName"] as? String,
-                           let videoURL = data["videoURL"] as? String {
+                           let videoURL = data["videoURL"] as? String,
+                           let focus = data["focus"] as? String,
+                           let explanation = data["explanation"] as? String {
                             
                             let workout = WorkoutData(
                                 id: document.documentID,
@@ -43,7 +45,9 @@ class WorkoutViewModel: ObservableObject {
                                 level: level,
                                 progress: progress,
                                 imageName: imageName,
-                                videoURL: videoURL
+                                videoURL: videoURL,
+                                focus: focus,
+                                explanation: explanation
                             )
                             
                             fetchedWorkouts.append(workout)

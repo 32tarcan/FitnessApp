@@ -59,7 +59,7 @@ struct WorkoutCardView: View {
 }
 
 #Preview {
-    let workout = WorkoutData(id: "1", title: "Chest Workout", duration: "1 hour", level: "Beginner", progress: "1/3", imageName: "Training-1", videoURL: "https://www.youtube.com/watch?v=video")
+    let workout = WorkoutData(id: "1", title: "Chest Workout", duration: "1 hour", level: "Beginner", progress: "1/3", imageName: "Training-1", videoURL: "https://www.youtube.com/watch?v=video", focus: "chest", explanation: "")
     return WorkoutCardView(workout: workout)
 }
 

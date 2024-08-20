@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct FocusView: View {
+    let workout: WorkoutData
+    
     var body: some View {
         VStack {
             Text("Focus Muscle")
                 .bold()
                 .font(.largeTitle)
-            Image("chest")
+            Image(workout.focus)
                 .resizable()
                 .frame(width: 200, height: 300)
                 .cornerRadius(15)
@@ -22,5 +24,5 @@ struct FocusView: View {
 }
 
 #Preview {
-    FocusView()
+    FocusView(workout: WorkoutData(id: "", title: "", duration: "", level: "", progress: "", imageName: "", videoURL: "", focus: "chest", explanation: ""))
 }

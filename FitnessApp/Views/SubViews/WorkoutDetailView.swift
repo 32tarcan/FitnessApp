@@ -54,7 +54,7 @@ struct WorkoutDetailView: View {
                         .padding(.horizontal)
                         .padding(.top, 10)
                 } else if viewModel.selectedButton == "Focus" {
-                    FocusView()
+                    FocusView(workout: workout)
                 }
             }
         }
@@ -68,7 +68,7 @@ struct WorkoutDetailView: View {
 
 #Preview {
     let viewModel = WorkoutViewModel()
-    let workout = WorkoutData(id: "1", title: "ABS Workout", duration: "1hour 20 minutes", level: "Beginner", progress: "1/3", imageName: "Training-3", videoURL: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be")
+    let workout = WorkoutData(id: "1", title: "ABS Workout", duration: "1hour 20 minutes", level: "Beginner", progress: "1/3", imageName: "Training-3", videoURL: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be", focus: "chest", explanation: "")
     viewModel.workouts = [workout]
     return WorkoutDetailView(viewModel: viewModel, workout: workout)
 }

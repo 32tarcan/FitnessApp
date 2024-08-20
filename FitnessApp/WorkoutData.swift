@@ -15,4 +15,6 @@ struct WorkoutData: Identifiable {
     var progress: String
     var imageName: String
     var videoURL: String
+    var focus: String
+    var explanation: String
 }
