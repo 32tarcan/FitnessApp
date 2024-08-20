@@ -128,6 +128,14 @@
 			path = AuthViewModels;
 			sourceTree = "<group>";
 		};
+		CE5669862C751C3700FA3D4E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE1146322C601D82005482E2 /* ViewModels */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CE73C0C52C5BC4E900E65782 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +160,7 @@
 				CE73C0EA2C5BC7EA00E65782 /* Helpers */,
 				CE11462D2C601BA8005482E2 /* Models */,
 				CE1146302C601BE6005482E2 /* WorkoutData.swift */,
-				CE1146322C601D82005482E2 /* ViewModels */,
+				CE5669862C751C3700FA3D4E /* Network */,
 				CE1146542C603A24005482E2 /* AuthViewModels */,
 				CE73C0E92C5BC7DA00E65782 /* Views */,
 				CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */,
