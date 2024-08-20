@@ -19,6 +19,7 @@ struct FocusView: View {
                 .resizable()
                 .frame(width: 200, height: 300)
                 .cornerRadius(15)
+                .shadow(color: Color(hex: "1E8FB2").opacity(0.6), radius: 15, x: 5, y: 5)
         }
     }
 }

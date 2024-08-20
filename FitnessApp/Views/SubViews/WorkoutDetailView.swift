@@ -50,9 +50,9 @@ struct WorkoutDetailView: View {
             
             ScrollView {
                 if viewModel.selectedButton == "Explanation" {
-                    ExplanationView()
+                    ExplanationView(workout: workout)
                         .padding(.horizontal)
-                        .padding(.top, 10)
+                        .padding(.top, 20)
                 } else if viewModel.selectedButton == "Focus" {
                     FocusView(workout: workout)
                 }
@@ -68,7 +68,7 @@ struct WorkoutDetailView: View {
 
 #Preview {
     let viewModel = WorkoutViewModel()
-    let workout = WorkoutData(id: "1", title: "ABS Workout", duration: "1hour 20 minutes", level: "Beginner", progress: "1/3", imageName: "Training-3", videoURL: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be", focus: "chest", explanation: "")
+    let workout = WorkoutData(id: "1", title: "ABS Workout", duration: "1hour 20 minutes", level: "Beginner", progress: "1/3", imageName: "Training-3", videoURL: "https://www.youtube.com/watch?v=yKyrOmVoApM&feature=youtu.be", focus: "chest", explanation: "aslfnasflkaskaslf")
     viewModel.workouts = [workout]
     return WorkoutDetailView(viewModel: viewModel, workout: workout)
 }
