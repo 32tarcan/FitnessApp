@@ -48,7 +48,7 @@ struct WorkoutDetailView: View {
             .padding(.horizontal)
             .padding(.top, 10)
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 if viewModel.selectedButton == "Explanation" {
                     ExplanationView(workout: workout)
                         .padding(.horizontal)
