@@ -65,7 +65,7 @@ struct HomeView: View {
                 .font(.custom("", size: 16))
                 .offset(x: -10)
                 
-                WorkoutListView()
+                WorkoutListView(selectedLevel: selectedButton == "All" ? nil : selectedButton)
                 
             }
         }
