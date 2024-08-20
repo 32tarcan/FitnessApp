@@ -21,7 +21,9 @@ struct WorkoutListView: View {
             .padding(.vertical)
         }
         .onAppear {
-            vm.fetchWorkouts()
+            if vm.workouts.isEmpty {
+                vm.fetchWorkouts()
+            }
         }
     }
 }
