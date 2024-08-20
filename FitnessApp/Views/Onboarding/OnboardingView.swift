@@ -22,7 +22,7 @@ struct OnboardingView: View {
                     .bold()
                     .font(.largeTitle)
                     .padding(.top, 50)
-                    .padding(.trailing, 200)
+                    .padding(.trailing, 250)
                 Spacer()
                 Text("Start Your Daily\n Workout Now!")
                     .multilineTextAlignment(.center)
