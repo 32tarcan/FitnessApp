@@ -8,6 +8,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
+    @StateObject private var viewModel = ExercisesViewModel()
     @State private var selectedTab = 0
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     @State private var showOnboarding = false
@@ -28,11 +29,12 @@ struct ContentView: View {
                         }
                         .tag(1)
                     
-                    ExerciseView()
+                   ExerciseListView()
                         .tabItem {
                             Label("Exercise", systemImage: "dumbbell")
                         }
                         .tag(2)
+
                     
                     ReportsView()
                         .tabItem {
