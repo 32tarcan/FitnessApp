@@ -26,11 +26,15 @@ struct WorkoutCardView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                
-                Text(workout.duration)
-                    .font(.subheadline)
-                    .foregroundColor(.white)
-                
+                HStack {
+                    Image(systemName: "clock.fill")
+                        .resizable()
+                        .frame(width: 14, height: 14)
+                        .foregroundColor(.white)
+                    Text(workout.duration)
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                }
                 HStack {
                     Text(workout.level)
                         .font(.subheadline)
