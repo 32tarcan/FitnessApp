@@ -28,6 +28,7 @@
 		CE70F79E2C78CFB8004F5067 /* ExercisesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */; };
 		CE70F7A02C78D073004F5067 /* ExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */; };
 		CE70F7A32C78D349004F5067 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F7A22C78D349004F5067 /* ExerciseListView.swift */; };
+		CE70F7AA2C78E384004F5067 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F7A92C78E384004F5067 /* GifImageView.swift */; };
 		CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */; };
 		CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73C0D32C5BC4E900E65782 /* ContentView.swift */; };
 		CE73C0D62C5BC4EA00E65782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesData.swift; sourceTree = "<group>"; };
 		CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewModel.swift; sourceTree = "<group>"; };
 		CE70F7A22C78D349004F5067 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
+		CE70F7A92C78E384004F5067 /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
 		CE73C0CE2C5BC4E900E65782 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppApp.swift; sourceTree = "<group>"; };
 		CE73C0D32C5BC4E900E65782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				CE73C0D12C5BC4E900E65782 /* FitnessAppApp.swift */,
 				CE73C0D32C5BC4E900E65782 /* ContentView.swift */,
 				CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */,
+				CE70F7A92C78E384004F5067 /* GifImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				CE11462C2C601B16005482E2 /* WorkoutCardView.swift in Sources */,
 				CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */,
 				CE11462A2C601A3A005482E2 /* FocusView.swift in Sources */,
+				CE70F7AA2C78E384004F5067 /* GifImageView.swift in Sources */,
 				CE1146382C602114005482E2 /* ExplanationView.swift in Sources */,
 				CE73C0ED2C5BC81500E65782 /* Color+Extension.swift in Sources */,
 			);
