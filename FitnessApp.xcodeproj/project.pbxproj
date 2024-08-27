@@ -47,6 +47,7 @@
 		CEA1C0232C74065C005F4A83 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C0222C74065C005F4A83 /* WorkoutListView.swift */; };
 		CED9ADD12C5C47C00087C0A4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD02C5C47C00087C0A4 /* ExerciseView.swift */; };
 		CED9ADD32C5C535B0087C0A4 /* WebWiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9ADD22C5C535B0087C0A4 /* WebWiew.swift */; };
+		CEECA91E2C7E84770082902B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CEECA91D2C7E84770082902B /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 				CE1146492C6037F7005482E2 /* FirebaseFirestore in Frameworks */,
 				CE1146432C6037F7005482E2 /* FirebaseAuth in Frameworks */,
 				CE11464D2C6037F7005482E2 /* FirebaseFunctions in Frameworks */,
+				CEECA91E2C7E84770082902B /* Lottie in Frameworks */,
 				CE1146512C6037F7005482E2 /* FirebaseStorage in Frameworks */,
 				CE11464B2C6037F7005482E2 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				CE1146532C6037F7005482E2 /* FirebaseStorageCombine-Community in Frameworks */,
@@ -296,6 +298,7 @@
 				CE11464E2C6037F7005482E2 /* FirebaseFunctionsCombine-Community */,
 				CE1146502C6037F7005482E2 /* FirebaseStorage */,
 				CE1146522C6037F7005482E2 /* FirebaseStorageCombine-Community */,
+				CEECA91D2C7E84770082902B /* Lottie */,
 			);
 			productName = FitnessApp;
 			productReference = CE73C0CE2C5BC4E900E65782 /* FitnessApp.app */;
@@ -327,6 +330,7 @@
 			mainGroup = CE73C0C52C5BC4E900E65782;
 			packageReferences = (
 				CE1146412C6037F7005482E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CEECA91C2C7E84770082902B /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = CE73C0CF2C5BC4E900E65782 /* Products */;
 			projectDirPath = "";
@@ -608,6 +612,14 @@
 				minimumVersion = 11.0.0;
 			};
 		};
+		CEECA91C2C7E84770082902B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +667,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE1146412C6037F7005482E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		CEECA91D2C7E84770082902B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEECA91C2C7E84770082902B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
