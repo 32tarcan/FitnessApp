@@ -21,15 +21,22 @@ struct WorkoutListView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVStack(spacing: 12) {
-                    ForEach(filteredWorkouts) { workout in
-                        NavigationLink(destination: WorkoutDetailView(viewModel: vm, workout: workout)) {
-                            WorkoutCardView(workout: workout)
-                                .padding(.horizontal)
+                if vm.workouts.isEmpty {
+                    LottieView(animationName: "Workout")
+                        .frame(width: 200, height: 200)
+                        .padding(.vertical, 200)
+                    
+                } else {
+                    LazyVStack(spacing: 12) {
+                        ForEach(filteredWorkouts) { workout in
+                            NavigationLink(destination: WorkoutDetailView(viewModel: vm, workout: workout)) {
+                                WorkoutCardView(workout: workout)
+                                    .padding(.horizontal)
+                            }
                         }
                     }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
             }
             .onAppear {
                 if vm.workouts.isEmpty {
