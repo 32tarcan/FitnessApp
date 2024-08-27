@@ -11,14 +11,15 @@ struct ReportsView: View {
     @State private var selectedDates: Set<Date> = []
     @State private var currentMonth: Date = Date()
     @Environment(\.calendar) var calendar
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         VStack {
             Text("Don't Break The Chain!")
                 .padding(.top, -40)
                 .font(.largeTitle)
-            
                 .foregroundColor(Color(hex: "1E8FB2"))
+            
             HStack {
                 Button(action: {
                     changeMonth(by: -1)
@@ -34,27 +35,17 @@ struct ReportsView: View {
                 }) {
                     Image(systemName: "arrowshape.right")
                         .foregroundColor(Color(hex: "1E8FB2"))
-                        
                 }
             }
             .padding()
 
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7)) {
                 ForEach(generateDaysForMonth(), id: \.self) { date in
-                    Button(action: {
-                        if selectedDates.contains(date) {
-                            selectedDates.remove(date)
-                        } else {
-                            selectedDates.insert(date)
-                        }
-                    }) {
-                        Text("\(calendar.component(.day, from: date))")
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(.white)
-                            .background(selectedDates.contains(date) ? Color(hex: "1E8FB2").opacity(0.7) : Color.clear)
-                            .cornerRadius(40)
-                            
-                    }
+                    Text("\(calendar.component(.day, from: date))")
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(.white)
+                        .background(isDateSelected(date) ? Color(hex: "1E8FB2").opacity(0.7) : Color.clear)
+                        .cornerRadius(40)
                 }
             }
             .border(Color(hex: "1E8FB2"))
@@ -77,7 +68,12 @@ struct ReportsView: View {
                 .foregroundColor(.gray)
                 .padding()
         }
-        
+        .onAppear {
+            if let lastLoginDate = authViewModel.lastLoginDate {
+                addDateToSelected(lastLoginDate)
+            }
+            addTodayIfNeeded()
+        }
     }
 
     func changeMonth(by value: Int) {
@@ -91,6 +87,13 @@ struct ReportsView: View {
         formatter.dateFormat = "MMMM yyyy"
         return formatter.string(from: date)
     }
+    
+    func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
+    }
 
     func generateDaysForMonth() -> [Date] {
         guard let monthInterval = calendar.dateInterval(of: .month, for: currentMonth) else {
@@ -102,8 +105,24 @@ struct ReportsView: View {
             calendar.date(byAdding: .day, value: $0, to: monthInterval.start)
         }
     }
+    
+    func isDateSelected(_ date: Date) -> Bool {
+        return selectedDates.contains { calendar.isDate($0, inSameDayAs: date) }
+    }
+
+    func addDateToSelected(_ date: Date) {
+        selectedDates.insert(date)
+    }
+    
+    func addTodayIfNeeded() {
+        let today = Date()
+        if !selectedDates.contains { calendar.isDate($0, inSameDayAs: today) } {
+            selectedDates.insert(today)
+        }
+    }
 }
 
 #Preview {
     ReportsView()
+        .environmentObject(AuthViewModel())
 }

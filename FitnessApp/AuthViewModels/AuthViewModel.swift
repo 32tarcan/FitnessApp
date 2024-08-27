@@ -5,6 +5,7 @@
 //  Created by Sakans on 5.08.2024.
 //
 
+
 import Foundation
 import FirebaseAuth
 
@@ -12,6 +13,7 @@ class AuthViewModel: ObservableObject {
     @Published var isAuthenticated: Bool = false
     @Published var errorMessage: String?
     @Published var displayName: String?
+    @Published var lastLoginDate: Date?
 
     init() {
         checkUser()
@@ -21,6 +23,7 @@ class AuthViewModel: ObservableObject {
         if let user = Auth.auth().currentUser {
             self.isAuthenticated = true
             self.displayName = user.displayName
+            self.lastLoginDate = UserDefaults.standard.object(forKey: "lastLoginDate") as? Date
         } else {
             self.isAuthenticated = false
         }
@@ -34,6 +37,7 @@ class AuthViewModel: ObservableObject {
             }
             self?.isAuthenticated = true
             self?.displayName = result?.user.displayName
+            self?.saveLoginTime()
         }
     }
 
@@ -55,6 +59,7 @@ class AuthViewModel: ObservableObject {
                     } else {
                         self?.isAuthenticated = true
                         self?.displayName = name
+                        self?.saveLoginTime()
                         completion(true)
                     }
                 }
@@ -69,8 +74,25 @@ class AuthViewModel: ObservableObject {
             try Auth.auth().signOut()
             isAuthenticated = false
             displayName = nil
+            lastLoginDate = nil
+            UserDefaults.standard.removeObject(forKey: "lastLoginDate")
         } catch {
             errorMessage = error.localizedDescription
         }
+    }
+
+    func saveLoginTime() {
+        let currentTime = Date()
+        lastLoginDate = currentTime
+        UserDefaults.standard.set(currentTime, forKey: "lastLoginDate")
+    }
+
+    func has24HoursPassed() -> Bool {
+        if let lastLoginTime = lastLoginDate {
+            let currentTime = Date()
+            let timeInterval = currentTime.timeIntervalSince(lastLoginTime)
+            return timeInterval >= 86400 // 24 saat = 86400 saniye
+        }
+        return true // Eğer daha önce giriş yapılmamışsa, 24 saat geçmiş gibi davran
     }
 }
