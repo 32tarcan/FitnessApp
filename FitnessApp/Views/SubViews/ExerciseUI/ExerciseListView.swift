@@ -22,7 +22,7 @@ struct ExerciseListView: View {
                 } else {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                         ForEach(viewModel.exercises, id: \.id) { exercise in
-                            ExerciseView(exercise: exercise)
+                            ExerciseCardView(exercise: exercise)
                         }
                     }
                     .padding()

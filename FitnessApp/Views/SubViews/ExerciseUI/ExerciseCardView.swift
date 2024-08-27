@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExerciseView: View {
+struct ExerciseCardView: View {
     let exercise: ExercisesData
     
     var body: some View {
@@ -30,5 +30,5 @@ struct ExerciseView: View {
 }
 
 #Preview {
-    ExerciseView(exercise: ExercisesData(id: "example_id", title: "Example Title", gif: "https://example.com/gif.gif"))
+    ExerciseCardView(exercise: ExercisesData(id: "example_id", title: "Example Title", gif: "https://example.com/gif.gif"))
 }
