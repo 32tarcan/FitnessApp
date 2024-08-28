@@ -15,7 +15,12 @@ struct ExerciseCardView: View {
             if let url = URL(string: exercise.gif) {
                 Image(exercise.image)
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
+                    .cornerRadius(8)
+                    .clipped()
+                    .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 10, x: 0, y: 5)
+
             } else {
                 LottieView(animationName: "Workout")
                     .frame(width: 200, height: 200)
