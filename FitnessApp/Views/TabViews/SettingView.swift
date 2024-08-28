@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SettingView: View {
     @State private var present = false
     @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
     @EnvironmentObject var authViewModel: AuthViewModel
+    @Environment(\.requestReview) var requestReview
+    
     
     var body: some View {
         VStack {
@@ -20,96 +23,37 @@ struct SettingView: View {
                         self.present = true
                     }) {
                         HStack {
-                            Image(systemName: "person")
-                            Text("Profile")
-                        }
-                    }
-                    .sheet(isPresented: $present, content: {
-                        ReportsView()
-                    })
-                    Button(action: {
-                        self.present = true
-                    }) {
-                        HStack {
-                            Image(systemName: "heart")
-                            Text("Favorites")
-                        }
-                    }
-                    .sheet(isPresented: $present, content: {
-                        ReportsView()
-                    })
-                    Button(action: {
-                        self.present = true
-                    }) {
-                        HStack {
-                            Image(systemName: "info.circle")
-                            Text("Help")
-                        }
-                    }
-                    .sheet(isPresented: $present, content: {
-                        ReportsView()
-                    })
-                }
-                Section {
-                    Button(action: {
-                        self.present = true
-                    }) {
-                        HStack {
-                            Image(systemName: "lock")
-                            Text("Privacy")
-                        }
-                    }
-                    .sheet(isPresented: $present, content: {
-                        ReportsView()
-                    })
-                    Button(action: {
-                        self.present = true
-                    }) {
-                        HStack {
                             Image(systemName: "newspaper")
                             Text("Terms of Use")
                         }
                     }
                     .sheet(isPresented: $present, content: {
-                        ReportsView()
+                        PrivacyView()
                     })
                     Button(action: {
-                        self.present = true
+                        requestReview()
                     }) {
                         HStack {
                             Image(systemName: "star")
                             Text("Rate Us!")
                         }
                     }
-                    .sheet(isPresented: $present, content: {
-                        ReportsView()
-                    })
-                    Button(action: {
-                        self.present = true
-                    }) {
-                        HStack {
-                            Image(systemName: "cup.and.saucer")
-                            Text("Buy me a coffee")
-                        }
-                    }
-                    .sheet(isPresented: $present, content: {
-                        ReportsView()
-                    })
+                }
+                Button(action: {
+                    authViewModel.signOut()
+                }) {
+                    Text("Logout")
+                        .foregroundColor(.white)
+                        .frame(width: 250, height: 50)
+                        .background(Color.red)
+                        .cornerRadius(16)
+                        .padding()
                 }
             }
             .foregroundStyle(Color(hex: "1E8FB2"))
             
-            Button(action: {
-                authViewModel.signOut()
-            }) {
-                Text("Logout")
-                    .foregroundColor(.white)
-                    .frame(width: 250, height: 50)
-                    .background(Color.red)
-                    .cornerRadius(16)
-                    .padding()
-            }
-            .padding(.bottom, 250)
+           
+            
         }
     }
 }

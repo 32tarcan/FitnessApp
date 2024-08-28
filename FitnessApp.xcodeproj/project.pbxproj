@@ -25,6 +25,7 @@
 		CE1146532C6037F7005482E2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CE1146522C6037F7005482E2 /* FirebaseStorageCombine-Community */; };
 		CE1146562C603A46005482E2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146552C603A46005482E2 /* AuthViewModel.swift */; };
 		CE1146572C603B78005482E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1146402C603764005482E2 /* GoogleService-Info.plist */; };
+		CE3D913E2C7F5A7100ECE726 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D913D2C7F5A7100ECE726 /* PrivacyView.swift */; };
 		CE70F79E2C78CFB8004F5067 /* ExercisesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */; };
 		CE70F7A02C78D073004F5067 /* ExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */; };
 		CE70F7A32C78D349004F5067 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F7A22C78D349004F5067 /* ExerciseListView.swift */; };
@@ -63,6 +64,7 @@
 		CE1146372C602114005482E2 /* ExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanationView.swift; sourceTree = "<group>"; };
 		CE1146402C603764005482E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE1146552C603A46005482E2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE3D913D2C7F5A7100ECE726 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesData.swift; sourceTree = "<group>"; };
 		CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewModel.swift; sourceTree = "<group>"; };
 		CE70F7A22C78D349004F5067 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				CE73C0E32C5BC6FC00E65782 /* ProgramView.swift */,
 				CE1146292C601A3A005482E2 /* FocusView.swift */,
 				CE1146372C602114005482E2 /* ExplanationView.swift */,
+				CE3D913D2C7F5A7100ECE726 /* PrivacyView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				CE70F7A32C78D349004F5067 /* ExerciseListView.swift in Sources */,
 				CE73C0E62C5BC70600E65782 /* ReportsView.swift in Sources */,
 				CE1146312C601BE6005482E2 /* WorkoutData.swift in Sources */,
+				CE3D913E2C7F5A7100ECE726 /* PrivacyView.swift in Sources */,
 				CE73C0E82C5BC70D00E65782 /* SettingView.swift in Sources */,
 				CE73C0D22C5BC4E900E65782 /* FitnessAppApp.swift in Sources */,
 				CE82C4D62C5D20ED00A737F6 /* ForgotPasswordView.swift in Sources */,
