@@ -19,7 +19,7 @@ struct ForgotPasswordView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("Forgot")
+                Image("Login")
                     .resizable()
                     .ignoresSafeArea()
                 Image("Rectangle")
