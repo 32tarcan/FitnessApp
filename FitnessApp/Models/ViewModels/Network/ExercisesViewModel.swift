@@ -30,11 +30,13 @@ class ExercisesViewModel: ObservableObject {
                         print(" Bahadır: Document data: \(data)")
                         
                         if let title = data["title"] as? String,
+                           let image = data["image"] as? String,
                            let gif = data["gif"] as? String {
                             let exercise = ExercisesData(
                                 id: document.documentID,
                                 title: title,
-                                gif: gif
+                                gif: gif,
+                                image: image
                             )
                             
                             fetchedWorkouts.append(exercise)

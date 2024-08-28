@@ -26,6 +26,7 @@
 		CE1146562C603A46005482E2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1146552C603A46005482E2 /* AuthViewModel.swift */; };
 		CE1146572C603B78005482E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1146402C603764005482E2 /* GoogleService-Info.plist */; };
 		CE3D913E2C7F5A7100ECE726 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D913D2C7F5A7100ECE726 /* PrivacyView.swift */; };
+		CE3D91432C7F6B0B00ECE726 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D91422C7F6B0B00ECE726 /* ReportsViewModel.swift */; };
 		CE70F79E2C78CFB8004F5067 /* ExercisesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */; };
 		CE70F7A02C78D073004F5067 /* ExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */; };
 		CE70F7A32C78D349004F5067 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F7A22C78D349004F5067 /* ExerciseListView.swift */; };
@@ -65,6 +66,7 @@
 		CE1146402C603764005482E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE1146552C603A46005482E2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CE3D913D2C7F5A7100ECE726 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		CE3D91422C7F6B0B00ECE726 /* ReportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewModel.swift; sourceTree = "<group>"; };
 		CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesData.swift; sourceTree = "<group>"; };
 		CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewModel.swift; sourceTree = "<group>"; };
 		CE70F7A22C78D349004F5067 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				CE70F79D2C78CFB8004F5067 /* ExercisesData.swift */,
 				CE1146302C601BE6005482E2 /* WorkoutData.swift */,
+				CE1146322C601D82005482E2 /* ViewModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,9 +137,8 @@
 		CE1146322C601D82005482E2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CE1146352C601FB9005482E2 /* WorkoutDetaiViewModel.swift */,
-				CE1146332C601DA0005482E2 /* WorkoutViewModel.swift */,
-				CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */,
+				CE5669862C751C3700FA3D4E /* Network */,
+				CE3D91422C7F6B0B00ECE726 /* ReportsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -152,7 +154,9 @@
 		CE5669862C751C3700FA3D4E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CE1146322C601D82005482E2 /* ViewModels */,
+				CE1146352C601FB9005482E2 /* WorkoutDetaiViewModel.swift */,
+				CE1146332C601DA0005482E2 /* WorkoutViewModel.swift */,
+				CE70F79F2C78D073004F5067 /* ExercisesViewModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -201,7 +205,6 @@
 				CE73C0EB2C5BC7F200E65782 /* Extensions */,
 				CE73C0EA2C5BC7EA00E65782 /* Helpers */,
 				CE11462D2C601BA8005482E2 /* Models */,
-				CE5669862C751C3700FA3D4E /* Network */,
 				CE1146542C603A24005482E2 /* AuthViewModels */,
 				CE73C0E92C5BC7DA00E65782 /* Views */,
 				CE73C0D52C5BC4EA00E65782 /* Assets.xcassets */,
@@ -384,6 +387,7 @@
 				CE73C0D42C5BC4E900E65782 /* ContentView.swift in Sources */,
 				CE73C0E42C5BC6FC00E65782 /* ProgramView.swift in Sources */,
 				CE70F79E2C78CFB8004F5067 /* ExercisesData.swift in Sources */,
+				CE3D91432C7F6B0B00ECE726 /* ReportsViewModel.swift in Sources */,
 				CED9ADD12C5C47C00087C0A4 /* ExerciseCardView.swift in Sources */,
 				CE73C0E22C5BC6F700E65782 /* TimeView.swift in Sources */,
 				CE82C4D02C5D0BD600A737F6 /* LoginView.swift in Sources */,
