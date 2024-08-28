@@ -11,5 +11,6 @@ struct ExercisesData: Identifiable {
     var id: String
     var title: String
     var gif: String
+    var image: String
 }
 

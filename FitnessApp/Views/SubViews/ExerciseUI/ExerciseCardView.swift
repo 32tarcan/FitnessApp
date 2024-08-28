@@ -13,13 +13,13 @@ struct ExerciseCardView: View {
     var body: some View {
         VStack {
             if let url = URL(string: exercise.gif) {
-                GifImageView(url: url)
+                Image(exercise.image)
+                    .resizable()
                     .frame(width: 150, height: 150)
-                    .cornerRadius(14)
-                    .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 15, x: 0, y: 5)
             } else {
-                Text("Invalid URL")
-                    .foregroundColor(.red)
+                LottieView(animationName: "Workout")
+                    .frame(width: 200, height: 200)
+                    .padding(.vertical, 200)
             }
             Text(exercise.title)
                 .font(.headline)
@@ -30,5 +30,5 @@ struct ExerciseCardView: View {
 }
 
 #Preview {
-    ExerciseCardView(exercise: ExercisesData(id: "example_id", title: "Example Title", gif: "https://example.com/gif.gif"))
+    ExerciseCardView(exercise: ExercisesData(id: "example_id", title: "Example Title", gif: "https://example.com/gif.gif", image: "Exercise-2"))
 }

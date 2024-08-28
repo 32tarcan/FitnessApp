@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct ExerciseDetailView: View {
+    
+    let exercises: ExercisesData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(exercises.title)
+                .font(.system(size: 24))
+                .bold()
+            
+            WebView(urlString: exercises.gif)
+                .frame(width: 360, height: 500)
+                .cornerRadius(8)
+                .shadow(color: Color(hex: "1E8FB2").opacity(0.5), radius: 10, x: 0, y: 5)
+                .padding()
+                .padding(.bottom, 100)
+        }
     }
 }
 
 #Preview {
-    ExerciseDetailView()
+    ExerciseDetailView(exercises: ExercisesData(id: "", title: "", gif: "", image: ""))
 }
